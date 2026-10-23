@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Full list of Bellure Clinic treatments: cleansing, injectables, laser and device treatments, with starting prices.">
+  <title>Services & Pricing — Bellure Clinic</title>
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/features.css">
+  <script src="js/theme.js" defer></script>
+  <script src="js/search.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container bar">
+      <a class="logo" href="index.html"><img src="images/logo-mark.svg" alt="" width="64" height="56">Bellure Clinic</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><button type="button" class="theme-toggle" id="theme-toggle">Switch to dark theme</button></li>
+          <li class="nav-cta"><a href="contact.html#booking">Book a visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="section" aria-labelledby="services-title">
+      <div class="container">
+        <span class="eyebrow">Services</span>
+        <h1 id="services-title">Every treatment, one honest price list</h1>
+        <p class="lead">Prices are a starting point &mdash; your doctor confirms the exact plan and cost at your consultation. Nothing is added without your sign-off.</p>
+        <nav aria-label="Jump to a category">
+          <ul class="chips">
+            <li><a href="#cleansing">Cleansing &amp; peels</a></li>
+            <li><a href="#injectables">Injectables</a></li>
+            <li><a href="#devices">Laser &amp; devices</a></li>
+            <li><a href="#courses">Course pricing</a></li>
+          </ul>
+        </nav>
+        <!-- TASK 3: live search (js/search.js) -->
+        <div class="search-box" role="search">
+          <span class="task-label">Task 3 &middot; Live search</span>
+          <div class="field">
+            <label for="treatment-search">Search treatments by name</label>
+            <input type="search" id="treatment-search" name="treatment-search" autocomplete="off" placeholder="e.g. peel, laser, LED" aria-describedby="search-count">
+          </div>
+          <p class="search-count" id="search-count" role="status" aria-live="polite"></p>
+          <p class="no-results" id="no-results" role="status" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="cleansing" data-searchable aria-labelledby="cleansing-title">
+      <div class="container">
+        <div class="section-head"><h2 id="cleansing-title">Cleansing &amp; peels</h2><p>Reset and refine &mdash; good starting points and good maintenance visits.</p></div>
+        <div class="grid grid-3">
+          <article class="card treatment-card">
+            <span class="tag">Popular</span>
+            <h3>Ultrasonic cleansing</h3>
+            <p>Deep pore cleaning using sound-wave exfoliation, no downtime.</p>
+            <p class="price">from &#8376;15,000</p>
+          </article>
+          <article class="card treatment-card">
+            <h3>Combined cleansing</h3>
+            <p>Manual and ultrasonic steps together for congested skin.</p>
+            <p class="price">from &#8376;19,000</p>
+          </article>
+          <article class="card treatment-card">
+            <h3>Chemical peel</h3>
+            <p>Acid-based resurfacing for tone and texture, matched to your skin.</p>
+            <p class="price">from &#8376;22,000</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="injectables" data-searchable aria-labelledby="injectables-title">
+      <div class="container">
+        <div class="section-head"><h2 id="injectables-title">Injectables</h2><p>Administered by a doctor after a full skin and health review.</p></div>
+        <div class="grid grid-3">
+          <article class="card treatment-card">
+            <span class="tag">Best seller</span>
+            <h3>Biorevitalization</h3>
+            <p>Hyaluronic acid injections for hydration and firmness.</p>
+            <p class="price">from &#8376;45,000</p>
+          </article>
+          <article class="card treatment-card">
+            <h3>Mesotherapy</h3>
+            <p>Micro-injections of vitamins and actives for tired or dull skin.</p>
+            <p class="price">from &#8376;38,000</p>
+          </article>
+          <article class="card treatment-card">
+            <h3>Anti-wrinkle injections</h3>
+            <p>Targeted treatment for expression lines, with a follow-up check.</p>
+            <p class="price">from &#8376;55,000</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="devices" data-searchable aria-labelledby="devices-title">
+      <div class="container">
+        <div class="section-head"><h2 id="devices-title">Laser &amp; device treatments</h2><p>Course-based treatments &mdash; your doctor sets the number of sessions.</p></div>
+        <div class="grid grid-3">
+          <article class="card treatment-card">
+            <h3>Laser hair removal</h3>
+            <p>Long-lasting hair removal, with a course matched to your skin type.</p>
+            <p class="price">from &#8376;8,000</p>
+          </article>
+          <article class="card treatment-card">
+            <h3>RF skin tightening</h3>
+            <p>Radiofrequency treatment to firm and lift without surgery.</p>
+            <p class="price">from &#8376;30,000</p>
+          </article>
+          <article class="card treatment-card">
+            <h3>LED light therapy</h3>
+            <p>A calming add-on for redness, healing, or acne-prone skin.</p>
+            <p class="price">from &#8376;12,000</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="courses" aria-labelledby="courses-title">
+      <div class="container">
+        <div class="section-head"><h2 id="courses-title">Course pricing</h2><p>Common courses booked as a package, at a lower per-session rate.</p></div>
+        <div class="table-scroll" role="region" aria-labelledby="courses-caption" tabindex="0">
+          <table>
+            <caption id="courses-caption">Package prices in Kazakhstani tenge</caption>
+            <thead>
+              <tr><th scope="col">Course</th><th scope="col">Sessions</th><th scope="col">Package price</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Laser hair removal &mdash; underarms</td><td>6 sessions</td><td>&#8376;42,000</td></tr>
+              <tr><td>Biorevitalization &mdash; full course</td><td>3 sessions</td><td>&#8376;120,000</td></tr>
+              <tr><td>RF skin tightening &mdash; face</td><td>5 sessions</td><td>&#8376;135,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="before-title">
+      <div class="container">
+        <div class="section-head"><h2 id="before-title">Before your first treatment</h2></div>
+        <ol class="steps-note">
+          <li>Every first visit is a consultation with a doctor, even for simple treatments.</li>
+          <li>You receive the plan, expected results, cost and downtime in writing.</li>
+          <li>Prices above are starting prices; the written plan shows your exact price.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">Not sure which treatment fits?</h2>
+        <p>Book a consultation &mdash; the doctor recommends a plan after examining your skin, not before.</p>
+        <a class="btn" href="contact.html#booking">Book a consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cols">
+        <section>
+          <h2>Bellure Clinic</h2>
+          <p>A medical cosmetology clinic in Astana. Licensed practice, visits by appointment only.</p>
+        </section>
+        <section>
+          <h2>Contact</h2>
+          <address>10 Kabanbay Batyr Ave, Astana<br><a href="tel:+77172000000">+7 (7172) 00-00-00</a><br><a href="mailto:hello@bellureclinic.kz">hello@bellureclinic.kz</a></address>
+        </section>
+        <section>
+          <h2>Opening hours</h2>
+          <p>Mon&ndash;Sat: 09:00&ndash;20:00<br>Sunday: closed</p>
+        </section>
+        <section>
+          <h2>Pages</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="copy"><small>&copy; 2026 Bellure Clinic. Student website project &mdash; the clinic is fictional.</small></p>
+    </div>
+  </footer>
+</body>
+</html>
