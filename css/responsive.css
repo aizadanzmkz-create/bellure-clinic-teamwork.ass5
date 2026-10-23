@@ -1,0 +1,65 @@
+/* ===========================================================
+   Bellure Clinic — responsive rules (mobile first)
+   style.css already describes the phone layout. Each query below
+   uses min-width, so a larger screen only ADDS to the smaller one.
+
+   Breakpoints (chosen where the content needs room, not by device):
+   - 48rem (768px): two-column cards, side-by-side hero, row footer
+   - 64rem (1024px): three/four columns, one-row header, sticky bar
+   - 90rem (1440px): wider container and larger section spacing
+   =========================================================== */
+
+/* ---------- Tablet: 48rem and up ---------- */
+@media (min-width: 48rem){
+  /* hero: stack -> side by side */
+  .hero-layout{ flex-direction:row; align-items:center; }
+  .hero-layout > *{ flex:1; }
+
+  /* card rows: column -> row that wraps */
+  .card-row{ flex-direction:row; flex-wrap:wrap; }
+  .card-row > *{ flex:1 1 13rem; }
+
+  /* grids: 1 -> 2 columns */
+  .grid-2, .grid-3, .grid-4, .grid-6{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+
+  /* header: logo left, menu right */
+  .bar{ flex-wrap:nowrap; }
+  .main-nav ul{ justify-content:flex-end; }
+
+  /* footer: column -> row */
+  .footer-cols{ flex-direction:row; justify-content:space-between; gap:2.5rem; }
+  .footer-cols > *{ flex:1; }
+
+  /* timeline gets more air */
+  .timeline li{ padding-left:2.25rem; }
+}
+
+/* ---------- Desktop: 64rem and up ---------- */
+@media (min-width: 64rem){
+  html{ scroll-padding-top:5rem; }
+
+  /* sticky header only when it fits on one row */
+  .site-header{ position:sticky; top:0; z-index:30; background:rgba(251,247,247,.94); backdrop-filter:blur(8px); }
+  .main-nav ul{ gap:.5rem 1rem; }
+
+  /* grids: 2 -> 3 or 4 columns */
+  .grid-3, .grid-6{ grid-template-columns:repeat(3, minmax(0, 1fr)); }
+  .grid-4{ grid-template-columns:repeat(4, minmax(0, 1fr)); }
+
+  /* form + contact card side by side, form gets more room */
+  .grid-form{ grid-template-columns:minmax(0, 3fr) minmax(0, 2fr); gap:3rem; align-items:start; }
+
+  /* about intro: text + glance card */
+  .grid-intro{ grid-template-columns:minmax(0, 3fr) minmax(0, 2fr); gap:3rem; align-items:start; }
+}
+
+/* ---------- Large desktop: 90rem and up ---------- */
+@media (min-width: 90rem){
+  .container{ max-width:80rem; }
+  .section{ padding-block:5rem; }
+}
+
+/* ---------- Respect reduced-motion preference ---------- */
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior:auto !important; }
+}

@@ -1,0 +1,98 @@
+/* ===========================================================
+   Bellure Clinic — Bootstrap form layer (contact + register)
+   Load order on form pages:
+     vendor/bootstrap/bootstrap.min.css  ->  css/style.css
+     ->  css/responsive.css  ->  css/forms.css
+   This file only adapts Bootstrap to the clinic palette and
+   fixes places where Bootstrap's reboot meets our own classes.
+   =========================================================== */
+
+/* ---------- Theme: Bootstrap variables -> clinic tokens ---------- */
+:root{
+  --bs-primary:#A5335F;
+  --bs-primary-rgb:165, 51, 95;
+  --bs-link-color:#A5335F;
+  --bs-link-color-rgb:165, 51, 95;
+  --bs-body-font-family:var(--font-body);
+  --bs-body-color:#2A2230;
+
+  /* Validation colours: darker than the Bootstrap defaults so the
+     feedback text keeps at least 4.5:1 contrast on the page background. */
+  --bs-form-valid-color:#146c43;
+  --bs-form-valid-border-color:#146c43;
+  --bs-form-invalid-color:#b02a37;
+  --bs-form-invalid-border-color:#b02a37;
+}
+
+/* ---------- Container: keep the same text edge as the other pages ---------- */
+.container{ --bs-gutter-x:0; }
+
+/* ---------- Buttons: keep the clinic look, make hover text readable ---------- */
+.btn{
+  --bs-btn-color:#fff;
+  --bs-btn-hover-color:#fff;
+  --bs-btn-active-color:#fff;
+  --bs-btn-active-bg:var(--btn-hover);
+  --bs-btn-active-border-color:var(--btn-hover);
+}
+.btn-outline{ --bs-btn-color:var(--ink); }
+.btn-outline:hover, .btn-outline:active{ color:#fff; }
+
+/* ---------- Labels, helper text, controls ---------- */
+.form-label{ margin-bottom:.4rem; font-size:.9rem; font-weight:700; color:var(--ink); }
+.form-label .optional{ font-weight:400; color:var(--ink-soft); }
+.form-text{ margin-top:.35rem; font-size:.85rem; color:var(--ink-soft); }
+
+.form-control, .form-select{
+  min-height:2.75rem;
+  padding:.75rem .9rem;
+  color:var(--ink);
+  border:1px solid var(--ink-soft);
+  border-radius:var(--radius-sm);
+}
+textarea.form-control{ min-height:8rem; resize:vertical; }
+
+.form-control:focus, .form-select:focus{
+  color:var(--ink);
+  border-color:var(--rose-dark);
+  box-shadow:0 0 0 .2rem rgba(165, 51, 95, .18);
+}
+
+/* Bootstrap draws its own validation icons; keep them but give the
+   invalid/valid states a slightly heavier border so they do not rely on colour alone. */
+.form-control.is-invalid, .form-select.is-invalid,
+.form-control.is-valid, .form-select.is-valid{ border-width:2px; }
+
+.valid-feedback, .invalid-feedback{ margin-top:.35rem; font-size:.875rem; font-weight:600; }
+
+/* ---------- Fieldset / legend (radio + checkbox groups) ---------- */
+fieldset.form-group{ margin:0; padding:0; border:0; min-width:0; }
+fieldset.form-group legend{
+  float:none; width:auto; margin-bottom:.5rem; padding:0;
+  font-family:var(--font-body); font-size:.9rem; font-weight:700; line-height:1.6;
+}
+.form-check-input{ width:1.2em; height:1.2em; margin-top:.2em; border-color:var(--ink-soft); }
+.form-check-input:checked{ background-color:var(--rose-dark); border-color:var(--rose-dark); }
+.form-check-input:focus{ border-color:var(--rose-dark); box-shadow:0 0 0 .2rem rgba(165, 51, 95, .18); }
+.form-check-label{ color:var(--ink); }
+
+/* ---------- Form card + messages ---------- */
+.form-card{
+  padding:1.5rem;
+  background:var(--card-bg);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+}
+.char-count{ font-variant-numeric:tabular-nums; }
+
+.alert{ margin-bottom:1.5rem; border-radius:var(--radius-sm); }
+.alert-success{ --bs-alert-color:#0f5132; --bs-alert-bg:#e3f4ea; --bs-alert-border-color:#9ccfb4; }
+.alert .alert-heading{ font-family:var(--font-display); font-size:1.125rem; margin-bottom:.25rem; }
+.alert p{ margin:0; color:inherit; }
+
+.side-list{ margin:0; padding-left:1.1rem; color:var(--ink-soft); font-size:.95rem; }
+.side-list li + li{ margin-top:.4rem; }
+
+@media (min-width: 48rem){
+  .form-card{ padding:2rem; }
+}

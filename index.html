@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bellure Clinic: doctor-led medical cosmetology in Astana with certified products and transparent pricing.">
+  <title>Bellure Clinic — Medical Cosmetology in Astana</title>
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/features.css">
+  <script src="js/theme.js" defer></script>
+  <script src="js/welcome.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container bar">
+      <a class="logo" href="index.html"><img src="images/logo-mark.svg" alt="" width="64" height="56">Bellure Clinic</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><button type="button" class="theme-toggle" id="theme-toggle">Switch to dark theme</button></li>
+          <li class="nav-cta"><a href="contact.html#booking">Book a visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="section" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div>
+          <span class="eyebrow">Medical cosmetology in Astana</span>
+          <h1 id="hero-title">Skin care, guided by doctors</h1>
+          <p class="lead">Bellure Clinic plans every treatment around an examination first &mdash; not a menu. Certified products, transparent pricing, and a recovery plan you understand before you start.</p>
+          <div class="btn-row">
+            <a class="btn" href="contact.html#booking">Book a consultation</a>
+            <a class="btn btn-outline" href="services.html">See our services</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="images/hero-illustration.svg" alt="Three overlapping circles in blue, rose and blush: the Bellure Clinic mark" width="360" height="320">
+        </div>
+      </div>
+    </section>
+
+    <!-- TASK 0: select elements and update content (js/welcome.js) -->
+    <section class="section alt" id="welcome" aria-labelledby="welcome-title">
+      <div class="container welcome-box">
+        <span class="task-label">Task 0 &middot; Welcome message</span>
+        <h2 id="welcome-title">Say hello to the clinic</h2>
+        <p>Tell us your name and we will greet you personally.</p>
+        <div class="inline-form">
+          <div class="field">
+            <label for="visitor-name">Your name</label>
+            <input type="text" id="visitor-name" name="visitor-name" maxlength="40" autocomplete="given-name" aria-describedby="welcome-message">
+          </div>
+          <button type="button" class="btn" id="welcome-button">Show welcome</button>
+        </div>
+        <p class="welcome-message" id="welcome-message" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section alt" id="why-us" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="why-title">Why patients choose us</h2>
+          <p>The care should be as considered as the results. Three promises we keep at every visit.</p>
+        </div>
+        <div class="card-row">
+          <article class="card">
+            <div class="dot dot-blue" aria-hidden="true">Dr</div>
+            <h3>Doctor-led plans</h3>
+            <p>Every treatment starts with an examination, not a sales pitch.</p>
+          </article>
+          <article class="card">
+            <div class="dot dot-rose" aria-hidden="true">&#10003;</div>
+            <h3>Certified products</h3>
+            <p>Registered formulas and single-use tools, every visit.</p>
+          </article>
+          <article class="card">
+            <div class="dot dot-blush" aria-hidden="true">i</div>
+            <h3>No surprises</h3>
+            <p>You know the steps, cost and downtime before you book.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="popular" aria-labelledby="popular-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="popular-title">Popular treatments</h2>
+          <p>A preview of six treatments patients book most. The full catalogue lives on the <a href="services.html">Services</a> page.</p>
+        </div>
+        <div class="grid grid-6">
+          <article class="card">
+            <h3>Facial cleansing</h3>
+            <p>Ultrasonic or combined cleansing for clear, even skin.</p>
+            <p class="price">from &#8376;15,000</p>
+          </article>
+          <article class="card">
+            <h3>Chemical peel</h3>
+            <p>Acid-based resurfacing for tone and texture, matched to your skin.</p>
+            <p class="price">from &#8376;22,000</p>
+          </article>
+          <article class="card">
+            <h3>Biorevitalization</h3>
+            <p>Hyaluronic acid injections for hydration and firmness.</p>
+            <p class="price">from &#8376;45,000</p>
+          </article>
+          <article class="card">
+            <h3>Mesotherapy</h3>
+            <p>Micro-injections of vitamins and actives for tired or dull skin.</p>
+            <p class="price">from &#8376;38,000</p>
+          </article>
+          <article class="card">
+            <h3>Laser hair removal</h3>
+            <p>A course matched to your skin and hair type.</p>
+            <p class="price">from &#8376;8,000</p>
+          </article>
+          <article class="card">
+            <h3>LED light therapy</h3>
+            <p>A calming add-on for redness, healing, or acne-prone skin.</p>
+            <p class="price">from &#8376;12,000</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="concerns" aria-labelledby="concerns-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="concerns-title">Not sure where to start?</h2>
+          <p>Pick the concern that sounds most like yours. Each link opens the matching part of our price list.</p>
+        </div>
+        <div class="grid grid-4">
+          <article>
+            <a class="card card-link" href="services.html#cleansing">
+              <h3>Congested or uneven skin</h3>
+              <p>Cleansing and peels reset the surface.</p>
+            </a>
+          </article>
+          <article>
+            <a class="card card-link" href="services.html#injectables">
+              <h3>Dry, dull or tired skin</h3>
+              <p>Injectables work on hydration and firmness.</p>
+            </a>
+          </article>
+          <article>
+            <a class="card card-link" href="services.html#devices">
+              <h3>Unwanted hair or loose skin</h3>
+              <p>Laser and device courses, planned by a doctor.</p>
+            </a>
+          </article>
+          <article>
+            <a class="card card-link" href="contact.html#booking">
+              <h3>Something else</h3>
+              <p>Book a consultation and the doctor will advise.</p>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="reviews-title">Patient reviews</h2>
+        </div>
+        <div class="card-row">
+          <figure class="card review">
+            <blockquote>
+              <p>The doctor examined my skin carefully before suggesting a course. No pressure to buy anything extra.</p>
+            </blockquote>
+            <figcaption>Aigerim, 32</figcaption>
+          </figure>
+          <figure class="card review">
+            <blockquote>
+              <p>After my peel I got clear aftercare notes. I recovered in exactly the time they promised.</p>
+            </blockquote>
+            <figcaption>Marat, 41</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">Meet the doctors first</h2>
+        <p>Read how a visit works and who will examine you, then pick a time that suits you.</p>
+        <div class="btn-row btn-row-center">
+          <a class="btn" href="about.html">About the clinic</a>
+          <a class="btn btn-outline" href="contact.html#booking">Book a consultation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cols">
+        <section>
+          <h2>Bellure Clinic</h2>
+          <p>A medical cosmetology clinic in Astana. Licensed practice, visits by appointment only.</p>
+        </section>
+        <section>
+          <h2>Contact</h2>
+          <address>10 Kabanbay Batyr Ave, Astana<br><a href="tel:+77172000000">+7 (7172) 00-00-00</a><br><a href="mailto:hello@bellureclinic.kz">hello@bellureclinic.kz</a></address>
+        </section>
+        <section>
+          <h2>Opening hours</h2>
+          <p>Mon&ndash;Sat: 09:00&ndash;20:00<br>Sunday: closed</p>
+        </section>
+        <section>
+          <h2>Pages</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="copy"><small>&copy; 2026 Bellure Clinic. Student website project &mdash; the clinic is fictional.</small></p>
+    </div>
+  </footer>
+</body>
+</html>
