@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a demonstration patient account at Bellure Clinic. The registration form checks every entry in your browser and sends nothing.">
+  <title>Register — Bellure Clinic</title>
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/features.css">
+  <script src="js/theme.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container bar">
+      <a class="logo" href="index.html"><img src="images/logo-mark.svg" alt="" width="64" height="56">Bellure Clinic</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html" aria-current="page">Register</a></li>
+          <li><button type="button" class="theme-toggle" id="theme-toggle">Switch to dark theme</button></li>
+          <li class="nav-cta"><a href="contact.html#booking">Book a visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="section" aria-labelledby="register-title">
+      <div class="container">
+        <span class="eyebrow">Patient account</span>
+        <h1 id="register-title">Create your patient account</h1>
+        <p class="lead">Keep your visit plans, treatment notes and aftercare reminders in one place. This is a demonstration: the form checks your entries in the browser and creates no real account.</p>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="register-form-title">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+
+          <div class="col-12 col-lg-8">
+            <h2 id="register-form-title">Registration form</h2>
+            <p class="demo-note" id="register-note"><strong>Demo only.</strong> Nothing is sent or stored. Use sample data, not your real details.</p>
+
+            <div class="alert alert-success d-none" role="status" tabindex="-1" data-success>
+              <h3 class="alert-heading">Registration looks valid</h3>
+              <p>Welcome, <span data-greet-slot></span>. This is a demonstration &mdash; no account was created and nothing was stored.</p>
+            </div>
+
+            <form id="register-form" class="form-card" action="#" method="post" novalidate data-validate aria-describedby="register-note">
+              <div class="row g-3">
+
+                <div class="col-12 col-md-6">
+                  <label for="first-name" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="first-name" name="firstName"
+                         required minlength="2" autocomplete="given-name" aria-describedby="first-name-help"
+                         data-greet
+                         data-msg-missing="Please enter your first name."
+                         data-msg-short="Your first name needs at least 2 characters.">
+                  <div id="first-name-help" class="form-text">At least 2 characters.</div>
+                  <div class="valid-feedback">Looks good.</div>
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="last-name" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="last-name" name="lastName"
+                         required minlength="2" autocomplete="family-name" aria-describedby="last-name-help"
+                         data-msg-missing="Please enter your last name."
+                         data-msg-short="Your last name needs at least 2 characters.">
+                  <div id="last-name-help" class="form-text">At least 2 characters.</div>
+                  <div class="valid-feedback">Looks good.</div>
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="col-12">
+                  <label for="reg-email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="reg-email" name="email"
+                         required autocomplete="email" aria-describedby="reg-email-help"
+                         data-msg-missing="Please enter your email address."
+                         data-msg-type="Enter an email address like name@example.com.">
+                  <div id="reg-email-help" class="form-text">This would be your sign-in name.</div>
+                  <div class="valid-feedback">Looks good.</div>
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" name="password"
+                         required minlength="8" autocomplete="new-password" aria-describedby="password-help"
+                         data-msg-missing="Please create a password."
+                         data-msg-short="Your password needs at least 8 characters.">
+                  <div id="password-help" class="form-text">At least 8 characters.</div>
+                  <div class="valid-feedback">Looks good.</div>
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="confirm-password" class="form-label">Confirm password</label>
+                  <input type="password" class="form-control" id="confirm-password" name="confirmPassword"
+                         required minlength="8" autocomplete="new-password" aria-describedby="confirm-password-help"
+                         data-match="password"
+                         data-msg-missing="Please repeat your password."
+                         data-msg-short="Your password needs at least 8 characters."
+                         data-msg-match="The passwords do not match.">
+                  <div id="confirm-password-help" class="form-text">Type the same password again.</div>
+                  <div class="valid-feedback">Passwords match.</div>
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="country" class="form-label">Country</label>
+                  <select class="form-select" id="country" name="country" required aria-describedby="country-help"
+                          data-msg-missing="Please choose your country.">
+                    <option value="" selected>Choose a country</option>
+                    <option value="kz">Kazakhstan</option>
+                    <option value="kg">Kyrgyzstan</option>
+                    <option value="uz">Uzbekistan</option>
+                    <option value="ru">Russia</option>
+                    <option value="tr">T&uuml;rkiye</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div id="country-help" class="form-text">Used to suggest the right phone code.</div>
+                  <div class="valid-feedback">Looks good.</div>
+                  <div class="invalid-feedback"></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <fieldset class="form-group">
+                    <legend>Gender <span class="optional fw-normal">(optional)</span></legend>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="gender-female" value="female">
+                      <label class="form-check-label" for="gender-female">Female</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="gender-male" value="male">
+                      <label class="form-check-label" for="gender-male">Male</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="gender-none" value="none">
+                      <label class="form-check-label" for="gender-none">Prefer not to say</label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="col-12">
+                  <fieldset class="form-group">
+                    <legend>Interests <span class="optional fw-normal">(optional)</span></legend>
+                    <div class="row row-cols-1 row-cols-sm-2 g-1">
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="interests" id="interest-skincare" value="skincare">
+                          <label class="form-check-label" for="interest-skincare">Daily skincare</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="interests" id="interest-injectables" value="injectables">
+                          <label class="form-check-label" for="interest-injectables">Injectable treatments</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="interests" id="interest-laser" value="laser">
+                          <label class="form-check-label" for="interest-laser">Laser and device courses</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="interests" id="interest-wellness" value="wellness">
+                          <label class="form-check-label" for="interest-wellness">Healthy lifestyle</label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="col-12 d-flex flex-wrap align-items-center gap-3">
+                  <button class="btn" type="submit">Create account</button>
+                  <button class="btn btn-outline" type="reset">Reset form</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <aside class="card" aria-labelledby="why-title">
+              <h2 id="why-title" class="card-title">What an account would give you</h2>
+              <ul class="side-list">
+                <li>Your treatment plan and the doctor&rsquo;s notes after each visit.</li>
+                <li>Aftercare reminders for the days of recovery.</li>
+                <li>Price and downtime for every treatment, before you book.</li>
+              </ul>
+              <p class="mt-md">Only want to ask a question? Use the <a href="contact.html#booking">contact form</a>.</p>
+            </aside>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cols">
+        <section>
+          <h2>Bellure Clinic</h2>
+          <p>A medical cosmetology clinic in Astana. Licensed practice, visits by appointment only.</p>
+        </section>
+        <section>
+          <h2>Contact</h2>
+          <address>10 Kabanbay Batyr Ave, Astana<br><a href="tel:+77172000000">+7 (7172) 00-00-00</a><br><a href="mailto:hello@bellureclinic.kz">hello@bellureclinic.kz</a></address>
+        </section>
+        <section>
+          <h2>Opening hours</h2>
+          <p>Mon&ndash;Sat: 09:00&ndash;20:00<br>Sunday: closed</p>
+        </section>
+        <section>
+          <h2>Pages</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="copy"><small>&copy; 2026 Bellure Clinic. Student website project &mdash; the clinic is fictional.</small></p>
+    </div>
+  </footer>
+  <script src="js/forms.js"></script>
+</body>
+</html>
